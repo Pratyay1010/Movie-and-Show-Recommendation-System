@@ -6,11 +6,10 @@ movie_name = ""
 movie_name = st.selectbox('Select a Show', recommender.show_df["title"])
 
 
-col_shape = []
-for i in range(10):
-    col_shape.append(4)
+columns1 = st.columns(5, gap='medium')
+columns2 = st.columns(5, gap='medium')
 
-columns = st.columns(col_shape, gap='medium')
+columns = columns1 + columns2
 
 if st.button('Recommend'):
 
